@@ -44,30 +44,31 @@ export class MemeGenerator extends Component {
         return (
             <div className='card'>
                 <form className="meme-form" onSubmit={this.handleSubmit}>
-                    <input className='topBox'
+                    <input 
                     type="text"
                     name="topText"
                     placeholder="Top Text"
                     value={this.state.topText}
                     onChange={this.handleChange}
                     />
-                    <input className='bottomBox'
+                    <input
                     type="text"
                     name="bottomText"
                     placeholder="Bottom Text"
                     value={this.state.bottomText}
                     onChange={this.handleChange}
                     />
-                </form>
-                <div className='genBtn'>
+                    <div className='genBtn'>
                         <button>Generate</button>
-                    </div>
+                </div>
+                </form>
+                
                 <div className='meme'>
                     <img src={this.state.randomImg} alt='' />
                     <h2 className='top'>{this.state.topText}</h2>
                     <h2 className='bottom'>{this.state.bottomText}</h2>
 
-                    <button className="downloadBtn">Download</button>
+                    {/* <button className="downloadBtn">Download</button> */}
                 </div>
                 
             </div>
