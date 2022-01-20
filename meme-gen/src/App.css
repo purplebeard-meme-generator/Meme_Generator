@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 *{
   margin: 0;
@@ -7,45 +7,140 @@
 }
 
 body {
-  /* background-color: red; */
-  font-family: 'Roboto', sans-serif;
-  
+  /* background-color: bisque; */
+  font-family: 'Amatic SC', cursive;
 }
 
+/* header */
 header {
   color: black;
-  /* background: linear-gradient(to right top, #0c5fdb, #56CFE1); */
-  position: absolute;
-  top: 2%;
-  width: auto;
+  background: linear-gradient(to right top, #0c5fdb, #56CFE1); 
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.titleHeader {
+  width: 100%;
+  display: flex;
+  padding: 3rem 6rem;
+  justify-content: space-around;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255),
+  2px 2px 1px rgb(255, 255, 255);
+  font-size: 1.3rem;
+  align-items: center;
+  flex-direction: column;
 }
 
 header img {
-  width: 100px;
+  width: 8rem;
 }
 
-.card{
-  height: 900px;
-  width: auto;
+.card {
+  margin: 5rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 15px #7400B8,
+  15px 15px 15px #48BFE3;;
+}
+
+.meme {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.meme > img {
+  width: 100%;
+}
+
+.meme > h2 {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.meme > .bottom {
+  bottom: 0;
+}
+
+.meme > .top {
+  top: 0;
+}
+
+.meme-form {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* text field */
+
+.meme-form > input {
+  width: 45%;
+  height: 3.5rem;
+  border-radius: 10rem;
+  padding-left: 2rem;
+}
+
+.topBox {
+  margin-right: -5rem;
+}
+
+/* generate button */
+
+.genBtn > button{
+  width: 15rem;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
+  border: none;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  color: black;
+  background: linear-gradient(to right top, #56CFE1, #80FFDB); 
+  border-radius: 20rem;
+  padding: 15px;
+  flex-direction: column;
   align-items: center;
-  background-color: bisque;
-  margin: 2%;
-  border-radius: 5%;
 }
 
-.realHeader {
-  width: 100%;
+/* download button */
+
+.downloadBtn {
+  width: 15rem;
+  margin: 20px auto;
+  display: flex;
   justify-content: center;
+  border: none;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  color: black;
+  background: linear-gradient(to right top, #5E60CE, #5390D9);
+  border-radius: 20rem;
+  padding: 15px;
+  flex-direction: column;
   align-items: center;
 }
-
-
-.api, header {
-  justify-content: center;
-  align-items: center;
-  background-color: red;
-  /* width: 100%; */
-}
-
