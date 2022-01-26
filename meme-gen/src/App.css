@@ -41,17 +41,23 @@ header img {
   border: 1px solid black;
   border-radius: 2rem;
   box-shadow: 1px 1px 15px #7400B8,
-  15px 15px 15px #48BFE3;;
+  15px 15px 15px #48BFE3;
 }
 
 .meme {
   position: relative;
-  width: 90%;
+  width: 85%;
   margin: auto;
+
+  /* WIDTH */
+  max-width: 800px;
 }
 
 .meme > img {
   width: 100%;
+/* PADDING */
+  padding-bottom: 1rem;
+
 }
 
 .meme > h2 {
@@ -62,6 +68,9 @@ header img {
   transform: translateX(-50%);
   margin: 15px 0;
   padding: 0 5px;
+  /* PADDING */
+  padding-bottom: 1rem;
+
   font-family: impact, sans-serif;
   font-size: 2em;
   text-transform: uppercase;
@@ -109,7 +118,7 @@ header img {
 
 /* generate button */
 
-.genBtn > button{
+.genBtn {
   width: 15rem;
   margin: 20px auto;
   display: flex;
@@ -119,12 +128,87 @@ header img {
   font-size: 2rem;
   letter-spacing: 1.5px;
   color: black;
-  background: linear-gradient(to right top, #56CFE1, #80FFDB); 
+  background: linear-gradient(to right top, #09bcd8, #80FFDB); 
   border-radius: 20rem;
   padding: 15px;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: .2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
 }
+
+.genBtn::after{
+    background-color: rgb(142, 73, 207);
+    border-radius: 3rem;
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+    
+  .genBtn:hover::after{ 
+    transform: translate(0, 0);
+  }
+
+
+  .captureBtn {
+    width: 15rem;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    border: none;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    color: black;
+    background: linear-gradient(to right top, #5E60CE, #5390D9);
+    border-radius: 20rem;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 100;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+  }
+
+  .captureBtn::after{
+    background-color: rgb(142, 73, 207);
+    border-radius: 3rem;
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.captureBtn:hover::after{ 
+  transform: translate(0, 0);
+}
+
 
 /* download button */
 
@@ -138,9 +222,37 @@ header img {
   font-size: 2rem;
   letter-spacing: 1.5px;
   color: black;
-  background: linear-gradient(to right top, #5E60CE, #5390D9);
+  background: linear-gradient(to right top, #09bcd8, #80FFDB); 
   border-radius: 20rem;
   padding: 15px;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: .2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+
+.downloadBtn::after{
+  background-color: rgb(142, 73, 207);
+  border-radius: 3rem;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: .2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+.downloadBtn:hover::after{ 
+transform: translate(0, 0);
 }
