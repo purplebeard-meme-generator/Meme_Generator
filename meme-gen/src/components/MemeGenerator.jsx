@@ -87,18 +87,19 @@ export class MemeGenerator extends Component {
     const styles = reactCSS({
         default: {
         color: {
-            width: "36px",
+            width: "40px",
             height: "14px",
-            borderRadius: "2px",
+            borderRadius: "20rem",
             background: `rgba(${this.state.color.r}, ${this.state.color.g}, ${this.state.color.b}, ${this.state.color.a})`,
         },
         swatch: {
             padding: "5px",
             background: "#fff",
-            borderRadius: "1px",
+            borderRadius: "20rem",
             boxShadow: "0 0 0 1px rgba(0,0,0,.1)",
             display: "inline-block",
             cursor: "pointer",
+            border: "1px solid black",
         },
         popover: {
             position: "absolute",
@@ -147,7 +148,7 @@ export class MemeGenerator extends Component {
             value={this.state.font_size}
             onChange={this.handleChange}
             />
-            <div>
+            <div style={{display: "block", alignContent: "center"}}>
             <div style={styles.swatch} onClick={this.handleClick1}>
                 <div style={styles.color} />
             </div>
@@ -163,7 +164,7 @@ export class MemeGenerator extends Component {
             </div>
         </form>
 
-        <form className="meme-" onSubmit={this.handleSubmit}>
+        <form className="meme-form" onSubmit={this.handleSubmit}>
             <button className="genBtn">Generate</button>
         </form>
         <ScreenCapture onEndCapture={this.handleScreenCapture}>
