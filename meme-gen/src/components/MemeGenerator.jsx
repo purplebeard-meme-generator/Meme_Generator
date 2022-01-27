@@ -15,7 +15,7 @@ export class MemeGenerator extends Component {
         bottomText: "",
         randomImg: "http://i.imgflip.com/1bij.jpg",
         allMemeImgs: [],
-        color: "red",
+        color: "#fff",
         displayColorPicker: false,
     };
     this.handleChange = this.handleChange.bind(this);
@@ -79,7 +79,7 @@ export class MemeGenerator extends Component {
     this.setState({ displayColorPicker: false });
     };
 
-    handleChange1 = (color) => {
+    handleChangeComplete = (color) => {
     this.setState({ color: color.rgb });
     };
 
@@ -87,13 +87,13 @@ export class MemeGenerator extends Component {
     const styles = reactCSS({
         default: {
         color: {
-            width: "40px",
-            height: "14px",
+            width: "50px",
+            height: "24px",
             borderRadius: "20rem",
             background: `rgba(${this.state.color.r}, ${this.state.color.g}, ${this.state.color.b}, ${this.state.color.a})`,
         },
         swatch: {
-            padding: "5px",
+            padding: "15px",
             background: "#fff",
             borderRadius: "20rem",
             boxShadow: "0 0 0 1px rgba(0,0,0,.1)",
@@ -118,9 +118,9 @@ export class MemeGenerator extends Component {
     console.log(this.state.font_size);
     console.log(screenCapture);
     return (
-        <div className="card">
+        <div className="card" >
         <form className="meme-form" onSubmit={this.handleSubmit}>
-            <input
+            <input 
             type="text"
             name="topText"
             placeholder="Top Text"
@@ -157,7 +157,7 @@ export class MemeGenerator extends Component {
                 <div style={styles.cover} onClick={this.handleClose} />
                 <SketchPicker
                     color={this.state.color}
-                    onChange={this.handleChange1}
+                    onChangeComplete={this.handleChangeComplete}
                 />
                 </div>
             ) : null}
