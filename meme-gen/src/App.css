@@ -68,6 +68,7 @@ header img {
   transform: translateX(-50%);
   margin: 15px 0;
   padding: 0 5px;
+  cursor: grabbing;
   /* PADDING */
   padding-bottom: 1rem;
 
